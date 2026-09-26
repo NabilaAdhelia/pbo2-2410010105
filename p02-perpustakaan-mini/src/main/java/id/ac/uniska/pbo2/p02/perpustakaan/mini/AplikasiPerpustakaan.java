@@ -15,6 +15,14 @@ public class AplikasiPerpustakaan {
         Anggota siti = new Anggota("2410010123", "Siti Rahmah");
         Anggota budi = new Anggota("2410010456", "Budi Santoso");
 
+             perpus.tambah(new Skripsi(
+        "S001",
+        "Implementasi IoT untuk Smart Farming",
+        2026,
+        "Nabila Adhelia",
+        "Teknik Informatika"
+));
+             
         tampilkanDaftar(perpus);
         System.out.println();
 
@@ -29,7 +37,17 @@ public class AplikasiPerpustakaan {
         cetakKembali(perpus, "M001", 3);
 
         System.out.println();
+        System.out.println("Pinjam S001: "
+                + perpus.pinjam("S001",
+                        new Anggota("2410010105", "Nabila Adhelia")));
+        
+        System.out.println();
+        System.out.println("Hasil pencarian 'iot':");
+        for (Koleksi k : perpus.cariJudul("iot")) {
+            System.out.println(k);
 
+        }
+        
         System.out.println("Koleksi tersedia: " + perpus.jumlahTersedia()
                 + " dari " + perpus.getDaftarKoleksi().size());
     }
