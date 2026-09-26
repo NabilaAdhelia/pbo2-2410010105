@@ -1,0 +1,7 @@
+1. Terjadi compilation error karena Koleksi merupakan abstract class, sehingga tidak dapat dibuat objek secara langsung menggunakan new Koleksi(...). Class abstract harus diturunkan terlebih dahulu oleh subclass yang dapat diinstansiasi.
+
+2. Jika anotasi @Override ada, compiler memberikan error karena method hitungdenda tidak melakukan override terhadap hitungDenda. Jika @Override dihapus, program tetap error karena kelas Buku masih wajib mengimplementasikan method hitungDenda(int) dari interface BisaDipinjam.
+
+3. Program menghasilkan IllegalArgumentException dengan pesan “Judul tidak boleh kosong” karena constructor Koleksi memeriksa judul dan menolak jika judul berupa string kosong.
+
+4. Aturan enkapsulasi dilanggar karena atribut status yang seharusnya bersifat private dapat diakses dan diubah langsung dari luar class Koleksi. Akibatnya, status koleksi dapat diubah sembarangan dan menyebabkan B002 dapat dipinjam kembali oleh Budi meskipun sebelumnya masih dipinjam Siti.
