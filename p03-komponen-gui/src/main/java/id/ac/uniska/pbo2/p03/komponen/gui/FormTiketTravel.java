@@ -45,7 +45,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
         hpLabel = new javax.swing.JLabel();
         hpField = new javax.swing.JTextField();
         tujuanCombo = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
+        tujuanLabel = new javax.swing.JLabel();
         kelasLabel = new javax.swing.JLabel();
         ekonomiRadio = new javax.swing.JRadioButton();
         bisnisRadio = new javax.swing.JRadioButton();
@@ -69,7 +69,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
 
         tujuanCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Banjarbaru", "Martapura", "Palangka Raya", "Samarinda", "Balikpapan" }));
 
-        jLabel1.setText("Kota Tujuan");
+        tujuanLabel.setText("Kota Tujuan");
 
         kelasLabel.setText("Kelas");
 
@@ -112,7 +112,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(namaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
+                    .addComponent(tujuanLabel)
                     .addComponent(kelasLabel)
                     .addComponent(fasilitasLabel)
                     .addComponent(catatanLabel))
@@ -148,7 +148,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tujuanCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(tujuanLabel))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(kelasLabel)
@@ -225,7 +225,6 @@ public class FormTiketTravel extends javax.swing.JFrame {
     private javax.swing.JLabel fasilitasLabel;
     private javax.swing.JTextField hpField;
     private javax.swing.JLabel hpLabel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.ButtonGroup kelasGroup;
     private javax.swing.JLabel kelasLabel;
     private javax.swing.JCheckBox makanCheck;
@@ -234,6 +233,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
     private javax.swing.JButton pesanButton;
     private javax.swing.JToggleButton temaToggle;
     private javax.swing.JComboBox<String> tujuanCombo;
+    private javax.swing.JLabel tujuanLabel;
     // End of variables declaration//GEN-END:variables
 
     private void tampilkanRingkasan() {

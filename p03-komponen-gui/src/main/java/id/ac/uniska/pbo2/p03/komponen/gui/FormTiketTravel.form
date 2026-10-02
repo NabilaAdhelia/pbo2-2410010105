@@ -33,7 +33,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="namaLabel" min="-2" pref="107" max="-2" attributes="0"/>
                   <Component id="hpLabel" min="-2" pref="82" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tujuanLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="kelasLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="fasilitasLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="catatanLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -76,7 +76,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="tujuanCombo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tujuanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -142,7 +142,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="tujuanLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Kota Tujuan"/>
       </Properties>
