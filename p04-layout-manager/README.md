@@ -44,6 +44,23 @@ Saya menggunakan Claude dalam pengerjaan tugas ini untuk:
 Semua form dibuat, dijalankan, dan diuji sendiri di NetBeans.
 
 
+## Saran dari teman (Tahap 4)
+
+| No | Pemeriksaan | Ya atau Belum |
+|---|---|---|
+| 1 | Label singkat, jelas, dan sejajar | Ya |
+| 2 | Isian dikelompokkan dengan judul bagian | Ya |
+| 3 | Placeholder dipakai untuk isian yang punya format | Ya |
+| 4 | Komponen sesuai jenis data | Ya |
+| 5 | Tombol utama menonjol dan berada di kanan bawah | Ya |
+| 6 | Jarak antar komponen konsisten | Ya |
+| 7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan | Ya |
+| 8 | Tampilan dibuat dengan JFrame Form dan layout manager, bukan Null Layout atau Absolute Layout | Ya |
+
+Saran perbaikan dari novia:
+
+1. Antara bagian "Data Anggota" dan "Kontak" hanya dipisahkan judul tebal, bisa ditambah jarak atau garis pemisah agar lebih jelas.
+
 
 ## Jawaban eksperimen
 
