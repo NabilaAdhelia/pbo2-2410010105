@@ -72,9 +72,5 @@ Tampilan (look and feel) dipasang pada komponen saat komponen itu dibuat. Jika s
 
 
 
-\### 3. Hasil Program - Dark Mode
-
-!\[Hasil Program Dark Mode](Screenshot%20(375).png)
-
 
 
