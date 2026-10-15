@@ -49,26 +49,26 @@ Tampilan (look and feel) dipasang pada komponen saat komponen itu dibuat. Jika s
 
 
 
+## Dokumentasi Screenshot
+
+### 1. Rancangan Form di NetBeans Design
+
+![Rancangan Form](./Screenshot%20(373).png)
+
+### 2. Hasil Program - Light Mode
+
+![Hasil Program Light Mode](./Screenshot%20(374).png)
+
+### 3. Hasil Program - Dark Mode
+
+![Hasil Program Dark Mode](./Screenshot%20(375).png)
 
 
 
-Dokumentasi Screnshoot
 
 
 
-\## Dokumentasi Screenshot
 
-
-
-\### 1. Rancangan Form di NetBeans Design
-
-!\[Rancangan Form](Screenshot%20(373).png)
-
-
-
-\### 2. Hasil Program - Light Mode
-
-!\[Hasil Program Light Mode](Screenshot%20(374).png)
 
 
 
