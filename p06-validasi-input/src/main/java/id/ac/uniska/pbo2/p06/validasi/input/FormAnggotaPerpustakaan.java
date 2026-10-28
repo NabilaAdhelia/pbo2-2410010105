@@ -507,10 +507,13 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
      * isian valid.
      */
     private boolean tandai(JComponent isian, JLabel pesan, String kesalahan) {
-        isian.putClientProperty("JComponent.outline", (kesalahan == null) ? null : "error");
-        pesan.setText((kesalahan == null) ? " " : kesalahan);
-        return kesalahan == null;
+    isian.putClientProperty("JComponent.outline", (kesalahan == null) ? null : "error");
+    pesan.setText((kesalahan == null) ? " " : kesalahan);
+    if (kesalahan == null && statusLabel.getText().contains("isian perlu diperbaiki")) {
+        statusLabel.setText(" ");
     }
+    return kesalahan == null;
+}
 
     private void daftar() {
         List<JComponent> salah = new ArrayList<>();
