@@ -40,6 +40,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         dataAnggotaLabel.putClientProperty("FlatLaf.styleClass", "h4");
         kontakLabel.putClientProperty("FlatLaf.styleClass", "h4");
         emailField.putClientProperty("JTextField.placeholderText", "nama@contoh.com");
+        npmField.putClientProperty("JTextField.placeholderText", "Contoh: 2410010123");
         hpField.putClientProperty("JTextField.placeholderText", "08xxxxxxxxxx");
         getRootPane().setDefaultButton(daftarButton);
         pack(); // hitung ulang ukuran setelah gaya huruf berubah
