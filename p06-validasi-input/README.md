@@ -50,13 +50,23 @@ Aturan validasi NPM, nama, email, dan nomor HP dikumpulkan di kelas `Validator`.
 
 ## Lembar Peer Review
 
-<img src="peer-review.jpg" alt="Lembar peer review" width="700">
+Lembar peer review dari teman (peninjau: Fadliatul Amaliyah, 2410010585).
+
+<img src="peer-review-dari-teman.jpeg" alt="Lembar peer review dari teman" width="700">
 
 ## Tabel Temuan Peer Review
 
 | Temuan | Skor | Perbaikan | Commit |
 |--------|------|-----------|--------|
-| (isi setelah peer review) | | | |
+| Dialog "Ringkasan Pendaftaran" muncul saat Daftar diklik walau form belum valid, seolah pendaftaran berhasil | 3 | Hapus sisa kode P05 di `daftarButtonActionPerformed`, sisakan `daftar();` | `a77495b` |
+| Tulisan "5 isian perlu diperbaiki" tidak berubah setelah isian dibetulkan | 2 | Di method `tandai`, kosongkan `statusLabel` saat isian sudah benar | `edc8e37` |
+| Kotak NPM tanpa contoh format | 1 | Tambah placeholder NPM di konstruktor | `cad1def` |
+
+### Bukti tampilan sebelum dan sesudah perbaikan
+
+<img src="review-sebelum.png" alt="Tampilan sebelum perbaikan" width="700">
+
+<img src="review-sesudah.png" alt="Tampilan sesudah perbaikan" width="700">
 
 ## Jawaban Pertanyaan Refleksi
 
@@ -75,8 +85,8 @@ Pengguna belum sempat mengisi, sehingga tanda merah terasa seperti teguran yang 
 Sebagian pengguna buta warna sehingga tidak dapat membedakan merah dari warna lain. Karena itu kesalahan ditandai dengan teks pesan yang jelas di bawah isian dan ringkasan "N isian perlu diperbaiki", bukan hanya garis merah.
 
 5. **Temuan peer review yang paling bermanfaat dan alasannya.**
-(isi setelah peer review)
+Temuan skor 3, yaitu dialog "Ringkasan Pendaftaran" yang muncul walau form belum valid. Sisa kode P05 itu membuat pengguna mengira pendaftaran berhasil padahal datanya salah, sehingga validasi yang sudah dibuat tidak ada gunanya. Temuan ini paling bermanfaat karena saya tidak melihatnya sendiri saat menguji, dan baru terlihat setelah form dicoba orang lain dengan data salah.
 
 ## Deklarasi Penggunaan AI
 
-Saya menggunakan Claude (Anthropic) sebagai alat bantu untuk memandu langkah pengerjaan, membaca garis merah dan pesan error di NetBeans, memeriksa tangkapan layar, dan menyusun draf README serta jawaban eksperimen dan refleksi. Kode dijalankan dan diuji sendiri di NetBeans, dan hasil eksperimen diambil dari aplikasi yang saya jalankan sendiri.
+Saya menggunakan Claude (Anthropic) sebagai alat bantu untuk memandu langkah pengerjaan, membaca garis merah dan pesan error di NetBeans, memeriksa tangkapan layar. Kode dijalankan dan diuji sendiri di NetBeans, dan hasil eksperimen diambil dari aplikasi yang saya jalankan sendiri.
