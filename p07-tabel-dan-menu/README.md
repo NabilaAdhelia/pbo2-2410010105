@@ -78,5 +78,5 @@ Pada baris `hapusItem.setAccelerator(...)` di `initComponents()`, `VK\_D` beruba
 
 
 
-Setelah atribut `model` diubah menjadi `private KontakTableModel model;` dan `model = new KontakTableModel();` dipindah ke setelah `initComponents()`, aplikasi gagal dibuka. Di Output muncul `IllegalArgumentException: Cannot set a null TableModel` pada `JTable.setModel`, dipanggil dari `initComponents()`. Ini terjadi karena `initComponents()`
+Setelah atribut `model` diubah menjadi `private KontakTableModel model;` dan `model = new KontakTableModel();` dipindah ke setelah `initComponents()`, aplikasi gagal dibuka. Di Output muncul `IllegalArgumentException: Cannot set a null TableModel` pada `JTable.setModel`, dipanggil dari `initComponents()`. Ini terjadi karena `initComponents()` dipanggil di awal konstruktor dan langsung memasang `model` ke `kontakTable`, padahal `model` belum dibuat sehingga masih `null`. Karena itu atribut `model` harus sudah dibuat saat dideklarasikan, sebelum `initComponents()` berjalan.
 
