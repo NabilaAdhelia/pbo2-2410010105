@@ -2,6 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+
+// Nama: Nabila Adhelia
+// NPM: 2410010105
+
 package id.ac.uniska.pbo2.p08.uts.a;
 
 /**
@@ -28,21 +32,154 @@ public class RekapNilai extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        formPanel = new javax.swing.JPanel();
+        npmLabel = new javax.swing.JLabel();
+        namaLabel = new javax.swing.JLabel();
+        nilaiTugasLabel = new javax.swing.JLabel();
+        nilaiUtsLabel = new javax.swing.JLabel();
+        nilaiUasLabel = new javax.swing.JLabel();
+        npmField = new javax.swing.JTextField();
+        namaField = new javax.swing.JTextField();
+        nilaiTugasField = new javax.swing.JTextField();
+        nilaiUtsField = new javax.swing.JTextField();
+        nilaiUasField = new javax.swing.JTextField();
+        simpanButton = new javax.swing.JButton();
+        bersihkanButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        rekapTable = new javax.swing.JTable();
+        pesanLabel = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Rekap Nilai Mahasiswa");
+
+        npmLabel.setText("NPM");
+
+        namaLabel.setText("Nama");
+
+        nilaiTugasLabel.setText("Nilai Tugas");
+
+        nilaiUtsLabel.setText("Nilai UTS");
+
+        nilaiUasLabel.setText("Nilai UAS");
+
+        simpanButton.setText("Simpan");
+        simpanButton.addActionListener(this::simpanButtonActionPerformed);
+
+        bersihkanButton.setText("Bersihkan");
+        bersihkanButton.addActionListener(this::bersihkanButtonActionPerformed);
+
+        rekapTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "NPM", "Nama", "Tugas", "UTS", "UAS", "Akhir", "Huruf"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(rekapTable);
+
+        pesanLabel.setForeground(new java.awt.Color(255, 0, 51));
+
+        javax.swing.GroupLayout formPanelLayout = new javax.swing.GroupLayout(formPanel);
+        formPanel.setLayout(formPanelLayout);
+        formPanelLayout.setHorizontalGroup(
+            formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(formPanelLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(formPanelLayout.createSequentialGroup()
+                        .addComponent(simpanButton)
+                        .addGap(35, 35, 35)
+                        .addComponent(bersihkanButton))
+                    .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(formPanelLayout.createSequentialGroup()
+                                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(formPanelLayout.createSequentialGroup()
+                                        .addComponent(namaLabel)
+                                        .addGap(32, 32, 32))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, formPanelLayout.createSequentialGroup()
+                                        .addComponent(npmLabel)
+                                        .addGap(37, 37, 37)))
+                                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(npmField, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(namaField, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, formPanelLayout.createSequentialGroup()
+                                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nilaiTugasLabel)
+                                    .addComponent(nilaiUtsLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nilaiUtsField, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nilaiTugasField, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(formPanelLayout.createSequentialGroup()
+                            .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(nilaiUasLabel)
+                                .addComponent(pesanLabel))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(nilaiUasField))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        formPanelLayout.setVerticalGroup(
+            formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(formPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(formPanelLayout.createSequentialGroup()
+                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(npmLabel)
+                            .addComponent(npmField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)
+                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(namaLabel)
+                            .addComponent(namaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(nilaiTugasLabel)
+                            .addComponent(nilaiTugasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nilaiUtsLabel)
+                            .addComponent(nilaiUtsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)
+                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nilaiUasLabel)
+                            .addComponent(nilaiUasField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pesanLabel)
+                        .addGap(18, 18, 18)
+                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(simpanButton)
+                            .addComponent(bersihkanButton)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
+
+        getContentPane().add(formPanel, java.awt.BorderLayout.WEST);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_simpanButtonActionPerformed
+
+    private void bersihkanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihkanButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bersihkanButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +207,21 @@ public class RekapNilai extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bersihkanButton;
+    private javax.swing.JPanel formPanel;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField namaField;
+    private javax.swing.JLabel namaLabel;
+    private javax.swing.JTextField nilaiTugasField;
+    private javax.swing.JLabel nilaiTugasLabel;
+    private javax.swing.JTextField nilaiUasField;
+    private javax.swing.JLabel nilaiUasLabel;
+    private javax.swing.JTextField nilaiUtsField;
+    private javax.swing.JLabel nilaiUtsLabel;
+    private javax.swing.JTextField npmField;
+    private javax.swing.JLabel npmLabel;
+    private javax.swing.JLabel pesanLabel;
+    private javax.swing.JTable rekapTable;
+    private javax.swing.JButton simpanButton;
     // End of variables declaration//GEN-END:variables
 }
