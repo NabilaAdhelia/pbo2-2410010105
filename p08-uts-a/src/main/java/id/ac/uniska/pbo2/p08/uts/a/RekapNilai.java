@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 // Nama: Nabila Adhelia
 // NPM: 2410010105
-
 package id.ac.uniska.pbo2.p08.uts.a;
+
+import javax.swing.JLabel;
 
 /**
  *
  * @author user
  */
 public class RekapNilai extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(RekapNilai.class.getName());
 
     /**
@@ -174,7 +174,22 @@ public class RekapNilai extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
-        // TODO add your handling code here:
+        String npm = npmLabel.getText().trim();
+    String nama = namaLabel.getText().trim();
+
+    if (!npm.matches("\\d{10}")) {
+        tampilkanError("NPM harus 10 digit angka", npmLabel);
+        return;
+    }
+    if (adanpm(npm)) {
+        tampilkanError("NPM " + npm + " sudah terdaftar", npmLabel);
+        return;
+    }
+    if (nama.isEmpty()) {
+        tampilkanError("Nama wajib diisi", namaLabel);
+        return;
+    }
+    
     }//GEN-LAST:event_simpanButtonActionPerformed
 
     private void bersihkanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihkanButtonActionPerformed
@@ -190,18 +205,9 @@ public class RekapNilai extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
+        //</editor-fold>
+        com.formdev.flatlaf.FlatLightLaf.setup();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new RekapNilai().setVisible(true));
     }
@@ -224,4 +230,12 @@ public class RekapNilai extends javax.swing.JFrame {
     private javax.swing.JTable rekapTable;
     private javax.swing.JButton simpanButton;
     // End of variables declaration//GEN-END:variables
+
+    private void tampilkanError(String npm_harus_10_digit_angka, JLabel npmLabel) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private boolean adanpm(String npm) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

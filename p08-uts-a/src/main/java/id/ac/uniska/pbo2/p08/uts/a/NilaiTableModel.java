@@ -34,6 +34,7 @@ public class NilaiTableModel {
         };
     }
 
+    
     public void tambah(Nilai m) {
         daftar.add(m);
         fireTableRowsInserted(daftar.size() - 1, daftar.size() - 1);
