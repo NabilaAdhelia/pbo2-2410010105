@@ -35,7 +35,7 @@ public class DialogBuku extends javax.swing.JDialog {
         pesanLabel.putClientProperty("FlatLaf.styleClass", "small");
         pesanLabel.setForeground(FlatLaf.isLafDark()
                 ? new Color(0xFF8A80) : new Color(0xC62828));
-        getRootPane().setDefaultButton(simpanButton);
+        getRootPane().setDefaultButton(simpanButton); //Enter, setelah initcomponent
         pack();
         setLocationRelativeTo(pemilik);
     }
@@ -149,21 +149,25 @@ public class DialogBuku extends javax.swing.JDialog {
     }//GEN-LAST:event_simpanButtonActionPerformed
 
     private void simpan() {
+        //Mengambil data dari kolom input
         String kode = kodeField.getText().trim();
         String judul = judulField.getText().trim();
         String penulis = penulisField.getText().trim();
-        int tahunIni = Year.now().getValue();
+        int tahunIni = Year.now().getValue(); //Hitung
 
+        //Validasi kode tidak boleh kosong
         if (kode.isEmpty()) {
             pesanLabel.setText("Kode wajib diisi");
             kodeField.requestFocusInWindow();
             return;
         }
+        //Validasi judul tidak boleh kosong
         if (judul.isEmpty()) {
             pesanLabel.setText("Judul wajib diisi");
             judulField.requestFocusInWindow();
             return;
         }
+        //Validasi tahun berupa angka
         int tahun;
         try {
             tahun = Integer.parseInt(tahunField.getText().trim());
@@ -172,6 +176,7 @@ public class DialogBuku extends javax.swing.JDialog {
             tahunField.requestFocusInWindow();
             return;
         }
+        //Validasi batas tahun
         if (tahun < 1900 || tahun > tahunIni) {
             pesanLabel.setText("Tahun berisi angka 1900 sampai " + tahunIni);
             tahunField.requestFocusInWindow();

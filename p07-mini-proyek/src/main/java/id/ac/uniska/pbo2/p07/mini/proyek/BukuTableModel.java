@@ -9,13 +9,17 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 public class BukuTableModel extends AbstractTableModel {
+    // ===== BAGIAN 1: TEMPAT MENYIMPAN DATA =====
 
-    private static final String[] KOLOM = {"Kode", "Judul", "Penulis", "Tahun Terbit", "Status"};
-    private final List<Buku> daftar = new ArrayList<>();
+    private static final String[] KOLOM
+            = // judul kolom di atas tabel
+            {"Kode", "Judul", "Penulis", "Tahun Terbit", "Status"}; // ada 5 kolom, urutannya tetap
+    private final List<Buku> daftar = new ArrayList<>(); // isi buku catatan: daftar Buku, awalnya kosong
+// ===== BAGIAN 2: JAWABAN UNTUK 3 PERTANYAAN TABEL =====
 
     @Override
-    public int getRowCount() {
-        return daftar.size();
+    public int getRowCount() { // tabel bertanya: "ada berapa baris?"
+        return daftar.size(); // jawab: sebanyak jumlah buku di daftar
     }
 
     @Override
@@ -32,17 +36,25 @@ public class BukuTableModel extends AbstractTableModel {
     public Object getValueAt(int baris, int kolom) {
         Buku b = daftar.get(baris);
         return switch (kolom) {
-            case 0 -> b.kode();
-            case 1 -> b.judul();
-            case 2 -> b.penulis();
-            case 3 -> b.tahun();
-            default -> b.status();
+            case 0 ->
+                b.kode();
+            case 1 ->
+                b.judul();
+            case 2 ->
+                b.penulis();
+            case 3 ->
+                b.tahun();
+            default ->
+                b.status();
         };
     }
+// ===== BAGIAN 3: MENGAMBIL SATU BUKU =====
 
     public Buku get(int baris) {
         return daftar.get(baris);
     }
+// ===== BAGIAN 4: TAMBAH, UBAH, HAPUS =====
+    // Pola selalu sama: (1) ubah daftar, (2) teriak ke tabel supaya gambar ulang
 
     public void tambah(Buku buku) {
         daftar.add(buku);
@@ -59,14 +71,14 @@ public class BukuTableModel extends AbstractTableModel {
         daftar.remove(baris);
         fireTableRowsDeleted(baris, baris);
     }
-
-    public int hitungTersedia() {
-        int jumlah = 0;
+// ===== BAGIAN 5: MENGHITUNG =====
+    public int hitungTersedia() {   // hitung berapa buku yang tersedia
+        int jumlah = 0; // penghitung mulai dari 0
         for (Buku b : daftar) {
             if (b.status() == StatusBuku.TERSEDIA) {
                 jumlah++;
             }
         }
-        return jumlah;
+        return jumlah; //kembalikan
     }
 }

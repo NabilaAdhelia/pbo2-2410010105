@@ -4,13 +4,16 @@
  */
 package id.ac.uniska.pbo2.p07.mini.proyek;
 
-public enum StatusBuku {
+public enum StatusBuku {  // enum = daftar pilihan tetap (bukan class biasa)
+    
+    // ===== BAGIAN 1: DAFTAR PILIHAN =====
     TERSEDIA("Tersedia"),
     DIPINJAM("Dipinjam");
 
+    // ===== BAGIAN 2: TULISAN UNTUK DITAMPILKAN =====
     private final String label;
 
-    StatusBuku(String label) {
+    StatusBuku(String label) { //constructor: dipanggil otomatis untuk tiap pilihan di atas
         this.label = label;
     }
 

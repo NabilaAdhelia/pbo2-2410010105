@@ -199,11 +199,11 @@ public class KatalogBuku extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        FlatLightLaf.setup();
+        FlatLightLaf.setup(); //setup 
         java.awt.EventQueue.invokeLater(() -> new KatalogBuku().setVisible(true));
     }
 
-    private void isiContoh() {
+    private void isiContoh() { //TABEL: menambahkan data buku ke tabel
         model.tambah(new Buku("B001", "Laskar Pelangi", "Andrea Hirata", 2005, StatusBuku.TERSEDIA));
         model.tambah(new Buku("B002", "Bumi Manusia", "Pramoedya Ananta Toer", 1980, StatusBuku.DIPINJAM));
         model.tambah(new Buku("B003", "Negeri 5 Menara", "Ahmad Fuadi", 2009, StatusBuku.TERSEDIA));
@@ -212,8 +212,8 @@ public class KatalogBuku extends javax.swing.JFrame {
     }
 
     private void saring() {
-        String kata = cariField.getText().trim();
-        if (kata.isEmpty()) {
+        String kata = cariField.getText().trim(); //AMBIL: mengambil teks yang diketik pengguna
+        if (kata.isEmpty()) {  
             sorter.setRowFilter(null);
         } else {
             sorter.setRowFilter(RowFilter.regexFilter("(?i)" + Pattern.quote(kata), 0, 1, 2));
@@ -235,7 +235,7 @@ public class KatalogBuku extends javax.swing.JFrame {
     private void tambah() {
         Buku baru = new DialogBuku(this, "Tambah Buku", null).tampilkan();
         if (baru != null) {
-            model.tambah(baru);
+            model.tambah(baru); //TABEL
             perbaruiStatus();
         }
     }
@@ -274,7 +274,7 @@ public class KatalogBuku extends javax.swing.JFrame {
         hapusItem.setEnabled(adaPilihan);
     }
 
-    private void perbaruiStatus() {
+    private void perbaruiStatus() { //RINGKASAN: memperbarui informasi jumlah buku
         statusLabel.setText("Menampilkan " + bukuTable.getRowCount() + " dari "
                 + model.getRowCount() + " buku, " + model.hitungTersedia() + " tersedia");
     }
